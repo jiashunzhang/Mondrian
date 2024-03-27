@@ -3,10 +3,6 @@
 main module of mondrian
 """
 
-# Implemented by Qiyuan Gong
-# qiyuangong@gmail.com
-# 2014-09-11
-
 # @InProceedings{LeFevre2006,
 #   Title = {Mondrian Multidimensional K-Anonymity},
 #   Author = {LeFevre, Kristen and DeWitt, David J. and Ramakrishnan, Raghu},
@@ -175,7 +171,7 @@ def anonymize_strict(partition):
             pdb.set_trace()
         (split_val, next_val, low, high) = find_median(partition, dim)
         # Update parent low and high
-        if low is not '':
+        if low != '':
             partition.low[dim] = QI_DICT[dim][low]
             partition.high[dim] = QI_DICT[dim][high]
         if split_val == '' or split_val == next_val:
@@ -225,7 +221,7 @@ def anonymize_relaxed(partition):
     # use frequency set to get median
     (split_val, next_val, low, high) = find_median(partition, dim)
     # Update parent low and high
-    if low is not '':
+    if low != '':
         partition.low[dim] = QI_DICT[dim][low]
         partition.high[dim] = QI_DICT[dim][high]
     if split_val == '':
