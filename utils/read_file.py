@@ -2,9 +2,6 @@
 '''
 read csv data, 
 support numeric, category, time date
-
-author : Liu Kun
-date   : 2018-10
 '''
 
 from datetime import datetime
